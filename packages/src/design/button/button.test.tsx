@@ -4,16 +4,16 @@ import * as assert from "uvu/assert";
 import { render, fireEvent, waitFor } from "solid-testing-library";
 import { isInDocument, hasStyle } from "solid-dom-testing";
 
-import { TodoList } from "./todo-list";
+import { Button } from "./button";
 
-const test = suite<ReturnType<typeof render>>("<TodoList />");
+const test = suite<ReturnType<typeof render>>("<Button />");
 
 test.before.each((context) => {
-	const returnValue = render(() => <TodoList />);
-	Object.getOwnPropertyNames(returnValue).forEach((name) => {
+	const returnValue = render(() => <Button />);
+	for (const name of Object.getOwnPropertyNames(returnValue)) {
 		// @ts-expect-error
 		context[name] = returnValue[name];
-	});
+	}
 });
 
 test.after.each(({ unmount }) => unmount());
@@ -51,5 +51,3 @@ test("it will mark a todo as completed", async ({
 	const text = getByText("mark new todo as completed") as HTMLSpanElement;
 	assert.ok(hasStyle(text, { "text-decoration": "line-through" }));
 });
-
-test.run();
