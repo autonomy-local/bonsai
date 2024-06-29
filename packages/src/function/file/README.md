@@ -1,15 +1,10 @@
 📁use local file
 
-# Functions
-Original Private FileSystem functionsをWriteで利用するための関数を提供します。
-File System Access APIを利用して、ローカルファイルにアクセスします。
+📄README.md: # Path: packages/src/function/file/README.md
 
-## csv importer
+# やりたいことは？
 
-## json importer
+CSVファイルやJSONファイルなど種々のファイルを読み込み、データを取得する。ExcelファイルやGoogleスプレッドシートのような自由度の高い機能にはしない。
+一般的なユーザーがCSVファイルやJSONファイルを特殊なエディターや汎用アプリの使いこなしで活用するのは難しい。各アイテムへの制約（文字列、数値）やGemini(Nanoやサーバーサイド)による正規表現やフィルター処理への支援などをWebUI上で提供する。
+各ユーザーが各プロダクトでデータをこのパッケージ提供の機能を利用することで分析、活用できるようになると嬉しい。
 
-## image importer
-
-## pdf importer
-
-## local DB importer
