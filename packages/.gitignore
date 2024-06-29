@@ -131,3 +131,4 @@ dist
 
 # hosting build output
 public/
+*storybook.log
