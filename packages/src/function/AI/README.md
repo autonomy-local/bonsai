@@ -1,3 +1,3 @@
 🤖Use Generative AI in Browser Local
 
-use gemini nano
+use Gemini nano
