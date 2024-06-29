@@ -9,6 +9,9 @@ export default {
     mode: "default",
     disabled: false,
     description: "default",
+    eventEmitter: () => {
+      console.log("clicked");
+    }
   },
 };
 
@@ -20,6 +23,9 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   text: "Secondary",
   mode: "secondary",
+  eventEmitter: () => {
+    console.log("clicked");
+  },
   disabled: false,
   description: "secondary",
 };
@@ -28,6 +34,9 @@ export const Warning = Template.bind({});
 Warning.args = {
   text: "Warning",
   mode: "warning",
+  eventEmitter: () => {
+    console.log("clicked");
+  },
   disabled: false,
   description: "warning",
 };
@@ -36,6 +45,9 @@ export const Danger = Template.bind({});
 Danger.args = {
   text: "Danger",
   mode: "danger",
+  eventEmitter: () => {
+    console.log("clicked");
+  },
   disabled: false,
   description: "danger",
 };
