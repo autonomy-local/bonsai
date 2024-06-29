@@ -15,7 +15,7 @@ export type CustomButtonProps = {
   text: string;
   mode: "default" | "secondary" | "warning" | "danger";
 	eventEmitter: () => void;
-	onBulur?: () => void;
+	onBlur?: () => void;
 	onFocus?: () => void;
   disabled?: boolean;
   description?: string;	
@@ -29,7 +29,7 @@ export const CustomButton = (prop: CustomButtonProps): JSXElement => {
       id={prop.description}
       class={mode[prop.mode]}
 			onClick={prop.eventEmitter}
-			onblur={prop.onBulur}
+			onblur={prop.onBlur}
 			onfocus={prop.onFocus}
     >
       {prop.text}
