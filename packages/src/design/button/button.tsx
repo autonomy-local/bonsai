@@ -15,6 +15,7 @@ export type CustomButtonProps = {
   text: string;
   mode: "default" | "secondary" | "warning" | "danger";
 	eventEmitter: () => void;
+	logEmitter?: () => void;
 	onBlur?: () => void;
 	onFocus?: () => void;
   disabled?: boolean;
